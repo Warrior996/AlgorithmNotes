@@ -1,0 +1,13 @@
+#include<cstdio>
+int main() {
+    char str[10];
+    scanf("%s", str);
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] >= 'A' && str[i] <= 'Z')
+            str[i] = 'A' + 'Z' - str[i];    // 第一个字母变成第26个字母，第i个字母变成第（26-i+1)个字母
+        else if (str[i] >= 'a' && str[i] <= 'z')
+            str[i] = 'a' + 'z' - str[i];
+    }
+    printf("%s", str);
+    return 0;
+}
